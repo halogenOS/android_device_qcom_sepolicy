@@ -78,6 +78,7 @@ binder_call(mediaserver, bootanim);
 #Allow mediaserver to access service manager wfdservice
 allow mediaserver { STAProxyService wfdservice_service }:service_manager find;
 allow mediaserver surfaceflinger:unix_stream_socket rw_socket_perms;
+
 # DOLBY_START
 set_prop(mediaserver, dolby_prop)
 # DOLBY_END
@@ -87,3 +88,7 @@ use_per_mgr(mediaserver);
 
 #allow IPCam service
 allow mediaserver qipcam_service:service_manager add;
+
+# Allow mediaserver to search and get the widevine, playready firmwares
+allow mediaserver firmware_file:dir search;
+allow mediaserver firmware_file:file { read getattr open };
