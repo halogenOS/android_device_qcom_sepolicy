@@ -118,3 +118,6 @@ allow system_app qseeproxy:unix_dgram_socket sendto;
 # DOLBY_START
 set_prop(system_app, dolby_prop)
 # DOLBY_END
+
+# allow access to system app for FM
+allow system_app ctl_fm_dl_prop:property_service set;
