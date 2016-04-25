@@ -59,7 +59,7 @@ allow mm-qcamerad graphics_device:chr_file rw_file_perms;
 unix_socket_connect(mm-qcamerad, property, init)
 
 #Allow camera work normally in FFBM
-binder_call(mm-qcamerad, mmi)；
+binder_call(mm-qcamerad, mmi);
 
 # /data/fdAlbum
 type_transition mm-qcamerad system_data_file:file camera_data_file "fdAlbum";
