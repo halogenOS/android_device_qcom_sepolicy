@@ -164,3 +164,6 @@ allow system_server iop_data_file:dir search;
 allow system_server iop_data_file:sock_file write;
 
 set_prop(system_server, qemu_hw_mainkeys_prop);
+userdebug_or_eng(`
+  diag_use(system_server)
+')

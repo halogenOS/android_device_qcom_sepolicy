@@ -44,3 +44,7 @@ allow audioserver debugfs:file rw_file_perms;
 # Allow audioserver to create socket files for audio arbitration
 allow audioserver audio_data_file:sock_file { create setattr unlink };
 allow audioserver audio_data_file:dir remove_name;
+
+userdebug_or_eng(`
+  diag_use(audioserver)
+')

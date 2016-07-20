@@ -113,3 +113,8 @@ unix_socket_connect(mmi, cnd, cnd);
 unix_socket_connect(mmi, dpmwrapper, dpmd);
 unix_socket_connect(mmi, netmgrd, netmgrd);
 net_domain(mmi);
+
+#diag
+userdebug_or_eng(`
+    diag_use(mmi)
+')
