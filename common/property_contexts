@@ -63,6 +63,7 @@ qc.izat.                   u:object_r:location_prop:s0
 persist.rmnet.mux          u:object_r:rmnet_mux_prop:s0
 sys.usb.controller         u:object_r:sys_usb_controller_prop:s0
 sys.usb.configfs           u:object_r:sys_usb_configfs_prop:s0
+sys.usb.tethering          u:object_r:sys_usb_tethering_prop:s0
 qemu.hw.mainkeys           u:object_r:qemu_hw_mainkeys_prop:s0
 ro.dbg.coresight.cfg_file     u:object_r:coresight_prop:s0
 ctl.hbtp                   u:object_r:ctl_hbtp_prop:s0
@@ -82,6 +83,10 @@ ro.alarm_handled           u:object_r:alarm_handled_prop:s0
 ro.alarm_instance          u:object_r:alarm_instance_prop:s0
 #HWUI Property
 ro.hwui.texture_cache_size u:object_r:hwui_prop:s0
+#Bservice Property
+ro.sys.fw.bservice_ u:object_r:bservice_prop:s0
+#Delayed Service Restart Property
+ro.am.reschedule_service u:object_r:reschedule_service_prop:s0
 persist.graphics.vulkan.disable     u:object_r:graphics_vulkan_prop:s0
 #boot mode property
 sys.boot_mode              u:object_r:boot_mode_prop:s0
