@@ -162,3 +162,5 @@ allow system_server persist_alarm_file:file { rw_file_perms create };
 
 allow system_server iop_data_file:dir search;
 allow system_server iop_data_file:sock_file write;
+
+set_prop(system_server, qemu_hw_mainkeys_prop);
