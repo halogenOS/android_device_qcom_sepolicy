@@ -28,5 +28,4 @@ allow init configfs:dir r_dir_perms;
 allow init configfs:file { rw_file_perms link };
 allow init configfs:lnk_file create_file_perms;
 
-type cam_sysfs, sysfs_type, file_type;
 allow init cam_sysfs:file relabelto;
