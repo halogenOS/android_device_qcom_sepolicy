@@ -29,7 +29,6 @@ type sysfs_smd_open_timeout, sysfs_type, fs_type;
 type data_test_data_file, file_type, data_file_type;
 type sysrq_trigger_proc, fs_type, mlstrustedobject;
 # Persist file types
-type persist_file, file_type;
 type persist_bluetooth_file, file_type;
 type persist_data_file, file_type;
 type persist_drm_file, file_type;
@@ -59,7 +58,6 @@ type sysfs_msmuart_file, sysfs_type, fs_type;
 
 # Storage RFS file types
 type rfs_file, file_type, data_file_type;
-type rfs_system_file, file_type;
 type rfs_shared_hlos_file, file_type, data_file_type;
 
 #mm-pp-daemon file type for sysfs access
