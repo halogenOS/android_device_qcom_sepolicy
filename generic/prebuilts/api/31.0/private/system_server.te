@@ -1,4 +1,4 @@
-# Copyright (c) 2015,2017,2019 The Linux Foundation. All rights reserved.
+# Copyright (c) 2015,2017,2019,2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -65,3 +65,11 @@ get_prop(system_server, vendor_persist_dpm_prop)
 #Allow system_server to add and find qspmsvc service
 allow system_server vendor_qspmsvc_service:service_manager find;
 
+#Allow system server to access /dev/binderfs/binder_logs for binder info
+userdebug_or_eng(`
+allow system_server binderfs_logs:dir r_dir_perms;
+allow system_server binderfs_logs:file r_file_perms;
+')
+
+# Allow system server to access for rcs service
+get_prop(system_server, vendor_persist_rcs_prop)
